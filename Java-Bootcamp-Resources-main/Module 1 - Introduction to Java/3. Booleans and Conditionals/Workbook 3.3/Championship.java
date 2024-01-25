@@ -6,7 +6,19 @@ public class Championship {
         int gryffindor = 400;    //gryffindor points
         int ravenclaw = 200;    //ravenclaw points
 
-        // int margin = amount of points by which gryffindor scored over ravenclaw;
+        int pointsMargin = gryffindor-ravenclaw;
         
+        if(pointsMargin>=100){
+                System.out.println("gryffindor is in 1st place");
+        }
+        else if(pointsMargin>=0){
+                System.out.println("gryffindor is in second place" );
+        }
+        else if(pointsMargin>=-100){
+            System.out.println("gryffindor is in third place");
+        }
+        else{
+            System.out.println("gryffindor is in fourth place");
+        }
     }
 }
