@@ -6,6 +6,7 @@ import java.io.FileNotFoundException;
 
 public class Main {
     public static void main(String[] args){
+        
         try{
             FileInputStream fis = new FileInputStream("greetings.txt");
             Scanner scan = new Scanner(fis);
@@ -15,6 +16,10 @@ public class Main {
         catch(FileNotFoundException exception){
             System.out.println(exception.getMessage());
         }
+        finally{
+            System.out.println("process complete");
+    }
+    
     }
     
 }
