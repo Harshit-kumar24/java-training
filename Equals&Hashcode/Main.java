@@ -49,7 +49,7 @@
         return (this.name == emp.name && this.age == emp.age);
     }
 
-   
+   //you can override the java hashcode
 
 }
 
@@ -57,7 +57,9 @@ public class Main {
     public static void main(String[] args){
 
         System.out.println("checking for primitives");
-        System.out.println(2==2);
+        int a = 2;
+        int b = 2;
+        System.out.println(a==b);
 
         Employee e1= new Employee("harshit",20,25000);
         Employee e2= new Employee("harsh",24,25000);
