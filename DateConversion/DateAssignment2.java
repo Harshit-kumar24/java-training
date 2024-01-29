@@ -13,13 +13,8 @@ public class DateAssignment2 {
         String userDate = "29-01-2024 12:30";
         DateTimeFormatter  formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm");
 
-        LocalDateTime currentDate = null;
         try{
-            currentDate = LocalDateTime.parse(userDate,formatter);
-        }
-        catch(DateTimeParseException e){
-            e.printStackTrace();
-        }
+           LocalDateTime currentDate = LocalDateTime.parse(userDate,formatter);
         System.out.println("Current Date: "+ currentDate);
         //adding one day
         LocalDateTime incrementedDate = currentDate.plusDays(1);
@@ -50,5 +45,9 @@ public class DateAssignment2 {
         for(LocalDateTime date: dateData){
             System.out.println(date);
         }
+    }
+    catch(DateTimeParseException e){
+        e.printStackTrace();
+    }
       }
 }
