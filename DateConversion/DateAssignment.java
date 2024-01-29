@@ -17,7 +17,7 @@ public class DateAssignment {
         Date parsedDate = formatter.parse(userDate);
 
         //Unix format
-        long unixFormat = parsedDate.getTime()/1000;
+        long unixFormat = parsedDate.getTime();
         System.out.println("Unix format: "+unixFormat);
 
         //local timestamp(IST) to UTC
