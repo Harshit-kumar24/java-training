@@ -6,11 +6,13 @@ import java.time.format.DateTimeParseException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Scanner;
 
 public class DateAssignment2 {
     public static void main(String[] args){
-
-        String userDate = "29-01-2024 12:30";
+    
+        Scanner scan = new Scanner(System.in);
+        String userDate = scan.nextLine();
         DateTimeFormatter  formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm");
 
         try{
@@ -42,6 +44,7 @@ public class DateAssignment2 {
         Collections.sort(dateData);
 
         System.out.println("printing the dates in sorted order: ");
+
         for(LocalDateTime date: dateData){
             System.out.println(date);
         }
@@ -49,5 +52,6 @@ public class DateAssignment2 {
     catch(DateTimeParseException e){
         e.printStackTrace();
     }
+    scan.close();
       }
 }
