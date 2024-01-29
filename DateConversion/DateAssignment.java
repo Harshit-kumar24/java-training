@@ -23,6 +23,7 @@ public class DateAssignment {
         //local timestamp(IST) to UTC
 
         SimpleDateFormat utcFormatter = new SimpleDateFormat("dd-MM-yyyy HH:mm");
+        
         utcFormatter.setTimeZone(TimeZone.getTimeZone("UTC"));
         String utcTime = utcFormatter.format(parsedDate);
         System.out.println("UTC format: "+utcTime);
