@@ -16,7 +16,8 @@ public class DateAssignment2 {
         DateTimeFormatter  formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm");
 
         try{
-           LocalDateTime currentDate = LocalDateTime.parse(userDate,formatter);
+            
+        LocalDateTime currentDate = LocalDateTime.parse(userDate,formatter);
         System.out.println("Current Date: "+ currentDate);
         //adding one day
         LocalDateTime incrementedDate = currentDate.plusDays(1);

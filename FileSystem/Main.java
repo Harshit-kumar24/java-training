@@ -15,9 +15,12 @@ public class Main{
         writer.write("\nThis is another line in the file");
 
             for(String it: names){
-               writer.write("\n"+it) ;
+                   writer.write("\n"+it) ;
             }
         writer.close();
+
+
+
         }
          catch (IOException e) {
             e.printStackTrace();
@@ -38,4 +41,13 @@ public class Main{
             e.printStackTrace();
         }
     }
+
+
+
+    
 }
+
+
+
+
+

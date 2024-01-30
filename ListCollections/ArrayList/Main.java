@@ -1,33 +1,42 @@
 package ListCollections.ArrayList;
 
-
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class Main {
     public static void main(String[] args){
-        List<String> cities = new ArrayList<>();
-        cities.add("hyderabad");
-        cities.add("kolkata");
-        cities.add("gurugram");
-        cities.add("banglore");
-        cities.add("lucknow");
+       List<Employee> employeeList = new ArrayList<>();
 
-        System.out.println("The size of the arraylist is");
-        System.out.println(cities.size());
+       SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yy");
+       
+       try{
+       employeeList.add(new Employee(34,"harshit",formatter.parse("22-01-2024"),3500.0));
+       employeeList.add(new Employee(34,"kota sir",formatter.parse("24-01-2024"),250000.0));
+       employeeList.add(new Employee(34,"zama sir",formatter.parse("12-01-2024"),100000.0));
+       employeeList.add(new Employee(34,"atharv",formatter.parse("25-01-2024"),1000.0));
+       employeeList.add(new Employee(34,"ravi",formatter.parse("01-01-2024"),3000.0));
+       employeeList.add(new Employee(34,"ayushi",formatter.parse("09-01-2024"),35000.0));
+       employeeList.add(new Employee(34,"sakshi",formatter.parse("13-01-2024"),35000.0));
+       employeeList.add(new Employee(34,"rajshree",formatter.parse("17-01-2024"),35000.0));
+       employeeList.add(new Employee(34,"manav",formatter.parse("16-01-2024"),35000.0));
+       employeeList.add(new Employee(34,"harsh",formatter.parse("29-01-2024"),35000.0));
 
-        System.out.println("finding element at a specific index");
-        System.out.println(cities.get(2));
+        Comparator<Employee> salaryComparator = Comparator.comparingDouble(Employee::getSalary);
 
-        System.out.println("changing value at a specific index");
-        System.out.println(cities.set(2,"bhopal"));
-        System.out.println(cities.get(2));
 
-        System.out.println("removing element from a specific index");
-        cities.remove(2);
+       Collections.sort(employeeList,salaryComparator);
 
-        for(String it: cities){
-            System.out.println(it);
-        }
+       for(Employee it: employeeList){
+            System.out.println(it.getName()+" "+it.getSalary());
+       }
+       
+       }
+       catch(ParseException e){
+        e.printStackTrace();
+       }
     }
 }
