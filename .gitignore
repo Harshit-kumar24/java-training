@@ -1,4 +1,4 @@
 # .gitignore file
 
 # Ignore .vscode folder
-.vscode/
+/.vscode

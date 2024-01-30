@@ -6,7 +6,7 @@ import javax.crypto.Cipher;
 import javax.crypto.KeyGenerator;
 import javax.crypto.SecretKey;
 
-public class Main {
+public class CipherEDExample {
     public static void main(String[] args){
         String originalMessage = "This string is going to be encrypted and decrypted";
 

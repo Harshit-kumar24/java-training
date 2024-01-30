@@ -4,7 +4,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class Main{
+public class BufferedFIOExample{
     public static void main(String[] args){
         //writing in a file
         String[] names = {"harshit","ayushi","zama sir"};
@@ -14,12 +14,10 @@ public class Main{
         writer.write("This is a testing text, would you like some tea.");
         writer.write("\nThis is another line in the file");
 
-            for(String it: names){
-                   writer.write("\n"+it) ;
-            }
+        for(String it: names){
+               writer.write("\n"+it) ;
+        }
         writer.close();
-
-
 
         }
          catch (IOException e) {
@@ -28,7 +26,6 @@ public class Main{
         
         //Reading from a file
         try{
-
             BufferedReader reader = new BufferedReader( new FileReader("input.txt"));
             String line;
 
@@ -36,6 +33,7 @@ public class Main{
                 System.out.println(line);
             }
             reader.close();
+            
         }
         catch(IOException e){
             e.printStackTrace();
