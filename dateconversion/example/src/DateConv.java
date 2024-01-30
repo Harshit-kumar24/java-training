@@ -1,4 +1,4 @@
-package dateconversion.src;
+package dateconversion.example.src;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

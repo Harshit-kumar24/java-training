@@ -1,4 +1,4 @@
-package encodingdecoding.src;
+package encodingdecoding.example.src;
 
 import java.util.Base64;
 

@@ -1,4 +1,4 @@
-package dateconversion.src;
+package dateconversion.assignment2.src;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;

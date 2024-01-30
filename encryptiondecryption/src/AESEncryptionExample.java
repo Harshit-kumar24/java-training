@@ -8,7 +8,7 @@ import javax.crypto.SecretKey;
 
 //Algorithms that you can use for encryption 
 //AES, DES, RSA, DSA, IDEA
-public class CipherEDExample {
+public class AESEncryptionExample {
     public static void main(String[] args){
         String originalMessage = "This string is going to be encrypted and decrypted";
 

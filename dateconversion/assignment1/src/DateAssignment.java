@@ -1,4 +1,4 @@
-package dateconversion.src;
+package dateconversion.assignment1.src;
 
 import java.util.Scanner;
 import java.text.ParseException;

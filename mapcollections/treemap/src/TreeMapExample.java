@@ -1,4 +1,4 @@
-package mapcollections.src;
+package mapcollections.treemap.src;
 
 
 import java.util.Map;
